@@ -1,0 +1,176 @@
+.light {
+  --opacity: 0.5;
+  pointer-events: none;
+  mix-blend-mode: plus-lighter;
+  opacity: 0.5;
+  filter: blur(10px);
+  transform-origin: 0 0;
+  opacity: 0;
+  pointer-events: none;
+  background: conic-gradient(
+    from 60deg,
+    rgba(217, 217, 217, 0) 28.33%,
+    rgba(202, 89, 2, 0.4) 41.31%,
+    rgba(0, 250, 3, 0) 90%
+  );
+
+  border-radius: 50%;
+  width: 1000px;
+  height: 2000px;
+  animation: 0.8s ease-in 2.2s load-in,
+    8s ease-in-out 3s infinite alternate light;
+  position: fixed;
+  top: -300px;
+  left: -600px;
+  transform: rotate(-50deg);
+}
+
+@keyframes light {
+  0% {
+    opacity: 0.5;
+    transform: rotate(-50deg);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  63% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0.5;
+    transform: rotate(-50deg) skew(5deg) scaleX(1.4) scaleY(1.2);
+  }
+}
+
+.circularLight {
+  --opacity: 0.3;
+  pointer-events: none;
+  mix-blend-mode: plus-lighter;
+  filter: blur(4px);
+  transform-origin: 0 0;
+  opacity: 0;
+  background: conic-gradient(
+    rgba(217, 217, 217, 0) 8.33%,
+    rgba(202, 119, 2, 0.757) 41.31%,
+    rgba(0, 250, 3, 0) 90%
+  );
+  border-radius: 50%;
+  width: 150px;
+  height: 120px;
+  animation: 1.5s ease-in 1.5s load-in,
+    8s ease-in-out 3s infinite alternate light-2;
+  position: fixed;
+  top: 180px;
+  left: 260px;
+  transform: rotate(20deg) skew(20deg);
+}
+
+@keyframes light-2 {
+  0%,
+  to {
+    opacity: 0.2;
+    filter: blur(4px);
+    transform: rotate(20deg) skew(20deg);
+  }
+  30% {
+    opacity: 0.2;
+    filter: blur(6px);
+    transform: rotate(20deg) skew(28deg) translateY(-30px) scale(1.1);
+  }
+  60% {
+    opacity: 0.5;
+  }
+  63% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.2;
+    filter: blur(7px);
+  }
+}
+
+.tinyCircularLight {
+  --opacity: 0.3;
+  pointer-events: none;
+  mix-blend-mode: plus-lighter;
+  filter: blur(4px);
+  transform-origin: 0 0;
+  opacity: 0;
+  background: conic-gradient(
+    rgba(217, 217, 217, 0) 8.33%,
+    rgba(202, 119, 2, 0.46) 11.31%,
+    rgba(0, 250, 3, 0) 90%
+  );
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: 1s ease-in 2s load-in, 8s ease-in-out 3s infinite alternate light-2;
+  position: fixed;
+  top: 150px;
+  left: 400px;
+  transform: rotate(20deg) skew(20deg);
+}
+
+.artifactTop {
+  --opacity: 0.3;
+  pointer-events: none;
+  mix-blend-mode: plus-lighter;
+  filter: blur(5px);
+  transform-origin: 0 0;
+  opacity: 0;
+  background: conic-gradient(
+    rgba(217, 217, 217, 0) 8.33%,
+    rgba(202, 119, 2, 0.557) 41.31%,
+    rgba(0, 250, 3, 0) 90%
+  );
+  border-radius: 50%;
+  width: 50px;
+  height: 20px;
+  animation: 1.5s ease-in 2s load-in,
+    8s ease-in-out 3s infinite alternate light-2;
+  position: fixed;
+  top: 100px;
+  left: 600px;
+  transform: rotate(20deg) skew(20deg);
+}
+
+.circularLightArtifact {
+  --opacity: 0.3;
+  pointer-events: none;
+  mix-blend-mode: plus-lighter;
+  filter: blur(5px);
+  transform-origin: 0 0;
+  opacity: 0;
+  opacity: 0;
+  background: conic-gradient(
+    from 280deg,
+    rgba(217, 217, 217, 0) 8.33%,
+    rgba(202, 119, 2, 0.557) 41.31%,
+    rgba(0, 250, 3, 0) 90%
+  );
+  border-radius: 50%;
+  width: 50px;
+  height: 60px;
+  animation: 1.6s ease-in 2s load-in,
+    8s ease-in-out 3s infinite alternate light-2;
+  position: fixed;
+  top: 230px;
+  left: 300px;
+  transform: rotate(20deg) skew(20deg);
+}
+
+@keyframes load-in {
+  0% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: var(--opacity);
+  }
+}
