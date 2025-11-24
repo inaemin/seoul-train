@@ -1,0 +1,17 @@
+.container {
+  --perspective: 750px;
+  --color-stop-1: #3a3939;
+  --color-stop-2: #2a2929;
+  width: 100vw;
+  height: 100dvh;
+  perspective: var(--perspective);
+  background: linear-gradient(var(--color-stop-1), var(--color-stop-2));
+  pointer-events: none;
+  /* transition: perspective 1.5s ease-in-out; */
+  position: relative;
+  overflow: hidden;
+
+  & div {
+    pointer-events: none;
+  }
+}
