@@ -1,0 +1,109 @@
+.windowFrameInnerHighlight {
+  --top: 3.5%;
+  --left: 2.1%;
+  --shadow-strength: 5%;
+  top: var(--top);
+  left: var(--left);
+  width: calc(100% - var(--top));
+  height: calc(90% + var(--shadow-strength) - var(--left));
+  filter: blur(3px);
+  opacity: 0.3;
+  background: linear-gradient(
+    #393a3a 0%,
+    #53504d 50%,
+    #2e2d2d 75%,
+    #313334 100%
+  );
+  border-top-left-radius: 6.5rem;
+  border-bottom-left-radius: 6.5rem;
+  position: absolute;
+  box-shadow: -1px -1px #e4e3de;
+}
+
+.windowFrameInner {
+  --top: 4.1%;
+  --left: 2.55%;
+  top: var(--top);
+  left: var(--left);
+  width: calc(100% - var(--top));
+  height: calc(93% - var(--left));
+  filter: blur(1px);
+  opacity: 0.2;
+  background: linear-gradient(
+    #25272a 0%,
+    #25262d 50%,
+    #26272c 75%,
+    #53575d 100%
+  );
+  border-top-left-radius: 6.2rem;
+  border-bottom-left-radius: 6.2rem;
+  position: absolute;
+}
+
+.windowInset {
+  --top: 4.05%;
+  --left: 2.65%;
+  top: var(--top);
+  left: var(--left);
+  width: calc(100% - var(--top));
+  height: calc(92% - var(--left));
+  filter: blur(1px);
+  background: linear-gradient(
+    #545253 0%,
+    #86898e 10%,
+    #71767d 50%,
+    #5f656e 100%
+  );
+  border-top-left-radius: 6em;
+  border-bottom-left-radius: 6em;
+  position: absolute;
+  box-shadow: inset 8px -3px 10px rgba(228, 227, 222, 0.2);
+}
+
+.windowFrameOuter {
+  --top: 12.75%;
+  --left: 9.05%;
+  top: var(--top);
+  left: var(--left);
+  width: calc(100% - var(--top));
+  height: calc(87% - var(--left));
+  filter: blur(4px);
+  opacity: 0.5;
+  background: linear-gradient(90deg, #464542 0%, #717070 50%, #919397 100%);
+  border-top-left-radius: 5em;
+  border-bottom-left-radius: 5em;
+  position: absolute;
+  box-shadow: -1px -1px 1px #d3d3d3;
+}
+
+.windowFrameLedge {
+  --top: 13.5%;
+  --left: 9.5%;
+  top: var(--top);
+  left: var(--left);
+  width: calc(100% - var(--top));
+  height: calc(86% - var(--left));
+  background: linear-gradient(
+    #767274 0%,
+    #86898e 10%,
+    #71767d 50%,
+    #5f656e 100%
+  );
+  border-top-left-radius: 4.8em;
+  border-bottom-left-radius: 4.8em;
+  position: absolute;
+  box-shadow: inset 1px 3px 10px rgba(189, 188, 188, 0.5);
+}
+
+.blackBorder {
+  --top: 14.8%;
+  --left: 10.4%;
+  top: var(--top);
+  left: var(--left);
+  width: calc(100% - var(--top));
+  height: calc(86% - var(--left));
+  background: linear-gradient(#474545, #4e4d4b);
+  border-top-left-radius: 4.4em;
+  border-bottom-left-radius: 4.4em;
+  position: absolute;
+}
