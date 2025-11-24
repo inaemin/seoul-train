@@ -1,0 +1,134 @@
+.grain {
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  width: 2000px;
+  height: 2000px;
+  animation: 1s forwards load-in;
+  position: fixed;
+  top: 0;
+  left: 0;
+  &::before {
+    content: "";
+    opacity: 0.16;
+    pointer-events: none;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png");
+    width: calc(200% + 20rem);
+    height: calc(200% + 20rem);
+    transition: opacity 0.5s;
+    animation: 1s steps(2, end) infinite noise;
+    position: fixed;
+    top: -10rem;
+    left: -10rem;
+  }
+}
+
+.whiteOverlay {
+  --opacity: 1;
+  mix-blend-mode: plus-lighter;
+  z-index: 100;
+  opacity: 1;
+  pointer-events: none;
+  background: #ffccac;
+  width: 2000px;
+  height: 100dvh;
+  animation: 2s ease-in-out forwards fade-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.yummyColorGrading {
+  --opacity: 1;
+  opacity: var(--opacity);
+  mix-blend-mode: color-dodge;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(#976846, #4b2501);
+  width: 2000px;
+  height: 100dvh;
+  animation: 1s ease-in-out forwards load-in;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.warmth {
+  --opacity: 0.3;
+  width: 2000px;
+  height: 100dvh;
+  mix-blend-mode: plus-lighter;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(#5d1e05, #2c1801);
+  animation: 1s ease-in-out forwards load-in;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@keyframes load-in {
+  0% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: var(--opacity);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: var(--opacity);
+  }
+
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes noise {
+  0% {
+    transform: translateY(2rem);
+  }
+
+  10% {
+    transform: translate(-1rem, -2rem);
+  }
+
+  20% {
+    transform: translate(-4rem, 1rem);
+  }
+
+  30% {
+    transform: translate(4.5rem, -4.5rem);
+  }
+
+  40% {
+    transform: translate(-1rem, 3.5rem);
+  }
+
+  50% {
+    transform: translate(-4.5rem, -2rem);
+  }
+
+  60% {
+    transform: translate(1rem, 3rem);
+  }
+
+  70% {
+    transform: translate(3.5rem, -4rem);
+  }
+
+  80% {
+    transform: translate(-4.5rem, 0.5rem);
+  }
+
+  90% {
+    transform: translate(3rem, -2.5rem);
+  }
+
+  to {
+    transform: translate(-3.5rem, 0);
+  }
+}
