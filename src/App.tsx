@@ -10,6 +10,7 @@ import {
   Light,
   TinyCircularLight,
 } from "./lights";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       <YummyColorGrading />
       <Warmth />
       <WhiteOverlay />
+      <SpeedInsights />
     </>
   );
 }
