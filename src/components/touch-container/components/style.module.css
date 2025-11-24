@@ -1,0 +1,60 @@
+.ceiling {
+  filter: blur(3px);
+  background: linear-gradient(
+    #3a3a3c 0%,
+    #2f2d2c 13.28%,
+    #141413 19.46%,
+    #33322f 24.59%,
+    #363635 100%
+  );
+  width: 2000px;
+  height: 500px;
+  top: -680px;
+  left: -50%;
+  box-shadow: inset 0 -15px 10px rgba(67, 65, 65, 0.5);
+}
+
+.sideBar {
+  --width: 50%;
+  width: var(--width);
+  top: 0;
+  height: 1500px;
+  left: calc(-20px - var(--width));
+  filter: blur(3px);
+  opacity: 0.5;
+  background: linear-gradient(#313131 30%, #1e1a1a);
+  position: absolute;
+}
+
+.sideBarHightlight {
+  --width: 20px;
+  width: var(--width);
+  filter: blur(10px);
+  opacity: 0.2;
+  background: linear-gradient(
+    90deg,
+    rgba(43, 43, 44, 0.055) 70%,
+    rgba(134, 134, 141, 0.067)
+  );
+  height: 200dvh;
+  position: absolute;
+  bottom: -150dvh;
+  left: -20px;
+  box-shadow: inset 2px 0 10px rgba(27, 27, 27, 0.2);
+}
+
+.topBar {
+  filter: blur(3px);
+  background: linear-gradient(
+    #393a3a 0%,
+    #4b4844 50%,
+    #474441 75%,
+    #4d4e4f 100%
+  );
+  width: 2000px;
+  height: 200px;
+  position: absolute;
+  top: -200px;
+  left: -50%;
+  box-shadow: inset 3px -5px 50px #232323;
+}
