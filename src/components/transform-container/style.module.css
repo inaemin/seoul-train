@@ -1,0 +1,136 @@
+.transformContainer {
+  --x-offset: 0px;
+  --y-offset: -10px;
+  --scale: 1.15;
+  transform-origin: 50%;
+  transform: rotate3d(0, 1, 0.8, -20deg) skewX(-13.5deg) skewY(10deg)
+    scale(var(--scale)) translateX(var(--x-offset)) translateY(var(--y-offset));
+  transition: all 0.35s ease-in-out;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+@media (max-height: 700px) {
+  .transformContainer {
+    --y-offset: 30px;
+    --scale: 0.8;
+  }
+}
+
+@media (max-height: 800px) {
+  .transformContainer {
+    --y-offset: -30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .transformContainer {
+    --y-offset: 75px;
+    --scale: 0.9;
+  }
+}
+
+@media (max-width: 1200px) {
+  .transformContainer {
+    --y-offset: 10px;
+    --scale: 1.05;
+  }
+}
+
+@media (max-width: 450px) and (max-height: 1000px) {
+  .transformContainer {
+    --y-offset: 280px;
+    --x-offset: -90px;
+    --scale: 0.78;
+  }
+}
+
+@media (max-width: 500px) and (max-height: 700px) {
+  .transformContainer {
+    --y-offset: 180px;
+    --x-offset: -100px;
+    --scale: 0.68;
+  }
+}
+
+.axisContainer {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  perspective: 200px;
+  transform-style: preserve-3d;
+}
+
+.origin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+}
+
+/* X축 - 빨강 (오른쪽) */
+.axisX {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 2px;
+  background: red;
+  transform-origin: left center;
+  transform: translateY(-50%);
+}
+
+.axisX::after {
+  content: "X";
+  position: absolute;
+  right: -15px;
+  top: -8px;
+  color: red;
+  font-size: 12px;
+}
+
+/* Y축 - 초록 (위쪽) */
+.axisY {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 50px;
+  background: green;
+  transform-origin: center bottom;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.axisY::after {
+  content: "Y";
+  position: absolute;
+  top: -15px;
+  left: -8px;
+  color: green;
+  font-size: 12px;
+}
+
+/* Z축 - 파랑 (앞쪽, 3D) */
+.axisZ {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 2px;
+  background: blue;
+  transform-origin: left center;
+  transform: translateY(-50%) rotateY(-90deg);
+}
+
+.axisZ::after {
+  content: "Z";
+  position: absolute;
+  right: -15px;
+  top: -8px;
+  color: blue;
+  font-size: 12px;
+}
