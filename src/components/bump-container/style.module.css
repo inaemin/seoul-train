@@ -1,0 +1,6 @@
+.bumpContainer {
+  --bump-offset-x: 0px;
+  --bump-offset-y: 0px;
+  transform: translate(var(--bump-offset-x), var(--bump-offset-y));
+  transition: all 0.8s ease-in-out;
+}
