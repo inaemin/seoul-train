@@ -29,7 +29,7 @@ function App() {
       <TinyCircularLight />
       <YummyColorGrading />
       <Warmth />
-      {/* <WhiteOverlay /> */}
+      <WhiteOverlay />
     </>
   );
 }
