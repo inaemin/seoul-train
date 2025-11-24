@@ -8,7 +8,7 @@ export default function CloudsVideo() {
       loop
       playsInline
       className={styles.clouds}
-      src="./videos/clouds.mp4"
+      src="/videos/clouds.mp4"
     />
   );
 }

@@ -8,7 +8,7 @@ export default function WindowVideo() {
       loop
       playsInline
       className={styles.video}
-      src="./videos/window.mp4"
+      src="/videos/window.mp4"
     />
   );
 }
